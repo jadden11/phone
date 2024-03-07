@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mzar.com</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  .container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  h1 {
+    color: #333;
+  }
+  input[type="tel"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  input[type="tel"]:focus {
+    border-color: #007bff;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Get Started Now!</h1>
+  <p>Enter the number you want to track.</p>
+  <form id="phoneNumberForm">
+    <input type="tel" id="phoneNumber" placeholder="Enter phone number..." required>
+    <button type="submit">Get Started</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById("phoneNumberForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Add your logic here to handle the phone number input
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    alert("Phone number entered: " + phoneNumber);
+  });
+</script>
+
+</body>
+</html>
